@@ -57,15 +57,10 @@ Route::middleware('auth:sanctum')->group(function () {
     });
 
     Route::group(['middleware' => 'checkPhar'], function () {
-        Route::get('/orders/{id}',[OrderController::class,'pharGetOrders']);//عرض الطلبات عندالصيدلي
-   
-        Route::post('/medicins',[MedicinController::class,'show']);//عرض الادوية عند الصيدلي
-    
-        Route::post('/order/add',[OrderController::class,'store']);// اضافة طلب للصيدلي 
-   
-   
-        Route::get('/storeNames',[UserController::class,'index']);//عرض اسماء المستودعات عند الصيدلي
-
+        Route::get('/orders/{id}',[OrderController::class,'pharGetOrders']);
+        Route::post('/medicins',[MedicinController::class,'show']);
+        Route::post('/order/add',[OrderController::class,'store']); 
+        Route::get('/storeNames',[UserController::class,'index']);
         Route::post('/searchMedNamePhar',[MedicinController::class,'searchMedNamePhar']);
     });
 });

@@ -51,7 +51,6 @@ class MedicinController extends Controller
      */
     public function store(Request $request)
     {
-        //في قصة انو ما لازم الصيدلي يقدر يضيف دواء من هون
         $validator = Validator::make($request->all(), [
             'sc_name' => ['required', 'string', 'max:255'],
             'trad_name' => ['required', 'string', 'max:255'],
