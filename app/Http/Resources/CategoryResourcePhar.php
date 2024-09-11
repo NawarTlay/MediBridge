@@ -25,10 +25,12 @@ class CategoryResourcePhar extends JsonResource
             ];
         }
         else{
+
             return[
                 'error' => true,
                 'message' => $this->name." لا يوجد أدوية من صنف",
             ];    
+        
         }
     }
 }
