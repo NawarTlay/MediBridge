@@ -31,8 +31,6 @@ class MedicinController extends Controller
 
     public function show(Request $request)
     {   
-        // (كان في قصة انو بدو يكون الاودية لهاذ المستودع ويكونو هذول الادوية لانو تصنيف؟ ونفس الشي عند الصيدلي بس خلصتها(هاهاهاها
-    
         $data = Category::get();
 
         return response()->json([
@@ -109,7 +107,7 @@ class MedicinController extends Controller
                 'finish_date'=> $request['finish_date'],
                 'quantity' => $request['quantity'],
                 'user_id'=>Auth::user()->id,
-                'category_id'=>$data,//لانو صنف اختار اليوزر Idهوووون في قصة انو لازم بشار يبعتلي 
+                'category_id'=>$data,
                 'price' => $request['price'],
                 'manufacturer' => $request['manufacturer']
             ]);

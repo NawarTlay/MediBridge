@@ -42,9 +42,9 @@ Route::middleware('auth:sanctum')->group(function () {
     
     Route::group(['middleware' => 'checkStorehouse'], function () {
        
-        Route::get('/orders',[OrderController::class,'storeGetOrders']);//عرض الطلبات عند المستودع
-        Route::get('/medicins',[MedicinController::class,'index']);//عرض الادوية عند المستودع
-        Route::post('/medicin/add',[MedicinController::class,'store']);//اضافة دواء للمستودع
+        Route::get('/orders',[OrderController::class,'storeGetOrders']);
+        Route::get('/medicins',[MedicinController::class,'index']);
+        Route::post('/medicin/add',[MedicinController::class,'store']);
         
         Route::post('/updateOrderStatus/{order_id}',[OrderController::class,'updateOrderStatus']);
         Route::post('/updatePaymentStatus/{order_id}',[OrderController::class,'updatePaymentStatus']);
@@ -69,24 +69,4 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/searchMedNamePhar',[MedicinController::class,'searchMedNamePhar']);
     });
 });
-
-
-
-/*
-لا تنسى الاشعارااااااات
-*/
-
-/*
-نسيت كلمة المرور
-*/
-
-/*
-المفضلة
-*/
-
-
-/*
-بالبحث عن اسم الدواء لازم كمان يبحث عن اسم الصنف
-ولازم يبحث عن اسم الدواء وهو بقلب صنفه
-*/
 

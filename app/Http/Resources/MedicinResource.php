@@ -24,7 +24,7 @@ class MedicinResource extends JsonResource
             'sc_name' => $this->sc_name,
             'trad_name' => $this->trad_name,
             'quantity' => $this->quantity,
-            'category' => $this->category->name,//تظهر مرتين في عرض الادوية ولكن ذلك لن يؤثر
+            'category' => $this->category->name,
             'price' => $this->price,
             'manufacturer' => $this->manufacturer,
             'finish_date' => $this->finish_date,
